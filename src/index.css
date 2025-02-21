@@ -9,9 +9,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: light  ) {
+@media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #f1f1f1;
   }
+}
+
+@theme {
+  --color-mint-50: #e8fff7;
+  --color-mint-100: #c6ffeb;
+  --color-mint-200: #93ffdd;
+  --color-mint-300: #4fffcf;
+  --color-mint-400: #0ffcbe;
+  --color-mint-500: #00e5a8;
+  --color-mint-600: #00bb8a;
+  --color-mint-700: #009673;
+  --color-mint-800: #00765c;
+  --color-mint-900: #00614e;
+  --color-mint-950: #00372e;
+
+  --color-nile-blue-50: #f4f7fb;
+  --color-nile-blue-100: #e8eff6;
+  --color-nile-blue-200: #ccddeb;
+  --color-nile-blue-300: #a0c1d9;
+  --color-nile-blue-400: #6ca0c4;
+  --color-nile-blue-500: #4a83ad;
+  --color-nile-blue-600: #386a91;
+  --color-nile-blue-700: #2e5476;
+  --color-nile-blue-800: #294963;
+  --color-nile-blue-900: #213547;
+  --color-nile-blue-950: #1a2837;
+
+  --shadow-shape: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
 }
