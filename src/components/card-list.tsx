@@ -1,7 +1,11 @@
+import { Species } from "../@types/types";
+
 export default function CardList({
   handleOpenModal,
+  pokemonCharacter
 }: {
   handleOpenModal: () => void;
+  pokemonCharacter: Species
 }) {
   return (
     <div
@@ -15,8 +19,8 @@ export default function CardList({
             alt="img"
           />
         </div>
-        <span className="font-semibold tracking-wide text-lg lg:text-xl">
-          <p>Bulbasaur</p>
+        <span className="font-semibold tracking-wide text-lg lg:text-2xl capitalize">
+          {pokemonCharacter.name}
         </span>
       </div>
     </div>

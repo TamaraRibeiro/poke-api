@@ -1,3 +1,15 @@
+export interface FetchPokemonProps {
+  count:    number;
+  next:     string | null;
+  previous: string | null;
+  results:  Species[];
+}
+
+export interface Species {
+  name: string;
+  url: string;
+}
+
 export interface CharacterProps {
   id: number;
   name: string;
@@ -24,11 +36,6 @@ interface Ability {
   ability: Species;
   is_hidden: boolean;
   slot: number;
-}
-
-interface Species {
-  name: string;
-  url: string;
 }
 
 interface Cries {

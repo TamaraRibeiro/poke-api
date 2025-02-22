@@ -5,12 +5,26 @@ import {
   LuChevronsLeft,
   LuChevronsRight,
 } from "react-icons/lu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CardList from "./card-list";
 import ModalCardInfo from "./modal-card-info";
+import axios from "axios";
+import { FetchPokemonProps } from "../@types/types";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [characters, setCharacters] = useState<FetchPokemonProps>();
+
+  useEffect(() => {
+    async function getCharacters() {
+      const response = await axios.get(
+        "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0"
+      );
+
+      setCharacters(response.data);
+    }
+    getCharacters();
+  }, []);
 
   function handleOpenModal() {
     setIsModalOpen(!isModalOpen);
@@ -33,11 +47,18 @@ export default function Home() {
               <BiSearchAlt />
             </button>
           </div>
-          <div className="rounded-3xl py-8 w-full flex justify-center items-center flex-col space-y-4 shadow-lg">
-            {Array.from({ length: 10 }).map(() => (
-                
-            <CardList handleOpenModal={handleOpenModal} />
-            ))}
+          <div className="rounded-3xl px-6 py-8 w-full flex justify-center items-center flex-col space-y-4 shadow-lg">
+            <div className="w-full flex flex-col items-center lg:grid lg:grid-cols-2 mx-auto gap-6">
+              {characters &&
+                characters.results.map((character, index) => (
+                  <CardList
+                    key={index}
+                    handleOpenModal={handleOpenModal}
+                    pokemonCharacter={character}
+                  />
+                ))}
+            </div>
+
             <div className="mt-8 flex flex-col items-center gap-3">
               <div className="flex gap-1.5">
                 <div className="border p-0.5 border-zinc-700/10 shadow-shape rounded-sm hover:scale-110 transition ease-in-out duration-200 cursor-pointer">
