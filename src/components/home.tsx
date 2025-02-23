@@ -119,7 +119,7 @@ export default function Home() {
               onChange={(e) => findPokemonByName(e.target.value)}
               type="text"
               placeholder="Search for a Pokemon"
-              className="px-1.5 py-0.5 border border-mint-500 rounded-lg w-full text-sm max-w-96 bg-opacity-20 outline-transparent focus:outline-mint-400 bg-zinc-800/40 placeholder:text-zinc-400/80"
+              className="px-1.5 lg:px-2 py-0.5 lg:py-1 border border-mint-500 rounded-lg w-full text-sm lg:text-base max-w-96 lg:max-w-md bg-opacity-20 outline-transparent focus:outline-mint-400 bg-zinc-800/40 placeholder:text-zinc-400/80"
             />
             {/* <button
               className="flex items-center gap-1.5 rounded-lg text-zinc-800 border border-mint-800 px-2 py-0.5 bg-mint-500 hover:bg-mint-400 transition ease-in-out duration-300 hover:scale-105 cursor-pointer"
