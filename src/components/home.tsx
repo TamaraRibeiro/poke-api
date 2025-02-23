@@ -7,12 +7,10 @@ import {
 } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import CardList from "./card-list";
-import ModalCardInfo from "./modal-card-info";
 import axios from "axios";
 import { FetchPokemonProps } from "../@types/types";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [characters, setCharacters] = useState<FetchPokemonProps>();
 
   useEffect(() => {
@@ -26,12 +24,9 @@ export default function Home() {
     getCharacters();
   }, []);
 
-  function handleOpenModal() {
-    setIsModalOpen(!isModalOpen);
-  }
   return (
     <>
-      <div className="flex justify-center items-center px-6 py-10 relative h-full">
+      <div className="flex justify-center items-center px-6 py-10 h-full tracking-wide">
         <div className="w-full space-y-10 flex flex-col items-center">
           <h1 className="text-center text-2xl lg:text-4xl font-bold">
             Welcome to the Pokemon API app!
@@ -51,11 +46,7 @@ export default function Home() {
             <div className="w-full flex flex-col items-center lg:grid lg:grid-cols-2 mx-auto gap-6">
               {characters &&
                 characters.results.map((character, index) => (
-                  <CardList
-                    key={index}
-                    handleOpenModal={handleOpenModal}
-                    pokemonCharacter={character}
-                  />
+                  <CardList key={index} pokemonCharacter={character} />
                 ))}
             </div>
 
@@ -81,7 +72,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {isModalOpen && <ModalCardInfo handleOpenModal={handleOpenModal} />}
     </>
   );
 }

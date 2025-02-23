@@ -1,8 +1,8 @@
 export interface FetchPokemonProps {
-  count:    number;
-  next:     string | null;
+  count: number;
+  next: string | null;
   previous: string | null;
-  results:  Species[];
+  results: Species[];
 }
 
 export interface Species {
@@ -30,6 +30,7 @@ export interface CharacterProps {
   stats: Stat[];
   types: Type[];
   past_types: PastType[];
+  past_abilities: [];
 }
 
 interface Ability {
@@ -202,6 +203,6 @@ interface HeldItemVersion {
 }
 
 interface PastType {
-    generation: Species
-    types: Type[];
+  generation: Species;
+  types: Type[];
 }
