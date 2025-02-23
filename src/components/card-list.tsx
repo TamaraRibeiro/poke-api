@@ -31,18 +31,22 @@ export default function CardList({
         onClick={handleOpenModal}
         className="border border-zinc-900 bg-nile-blue-800 px-3 lg:px-5 w-full max-w-md lg:max-w-3xl rounded-lg shadow-shape cursor-pointer hover:-translate-y-[1px] hover:translate-x-[1.8px]  transition ease-in-out duration-300 group"
       >
-        <div className="flex items-center gap-5 py-2.5">
+        <div className="flex items-center gap-3 lg:gap-5 py-2.5">
           <div className="flex items-center justify-center h-24 px-3 border border-mint-600 rounded-xl shadow-shape min-w-30">
             <img
               src={pokemonData && pokemonData.sprites.front_default}
               alt="img"
             />
           </div>
-          <div className="flex flex-col gap-4 lg:flex-row items-center justify-between w-full">
-            <span className="font-semibold tracking-wide text-lg lg:text-2xl capitalize">
+          <div className="flex flex-row items-center justify-between w-full">
+            <span className="font-semibold tracking-wide text-base md:text-lg lg:text-2xl capitalize">
               {pokemonCharacter.name}
             </span>
-            <div className="flex items-end"><TiArrowRightOutline size={22} className="group-hover:scale-110 group-hover:text-mint-300 transition ease-in-out duration-300 group-hover:opacity-0 group-hover:translate-x-4" /></div>
+            <div className="flex items-end">
+              <TiArrowRightOutline
+                className="group-hover:scale-110 group-hover:text-mint-300 transition ease-in-out duration-300 group-hover:opacity-0 group-hover:translate-x-4 size-4 md:size-5 lg:size-6"
+              />
+            </div>
           </div>
         </div>
       </div>
