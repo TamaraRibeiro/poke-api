@@ -44,4 +44,4 @@ You can search a Pokémon by typing its name on the search field, or by simply n
 - add a soft animation when opening/closing a modal;
 - add a button to play the sound of a Pokémon; 
 
-### ✨ You also can check the project running [here](https://poke-api-kappa-ten.vercel.app/)!
+### ✨ You can also check the project running [here](https://poke-api-kappa-ten.vercel.app/)!
