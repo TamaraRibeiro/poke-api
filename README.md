@@ -1,4 +1,4 @@
-# CodeLeap Product Design Test
+# BestUse Junior Software Developer test
 
 <p align="center">
   <img src=".github/cover.png" alt="cover BestUse test" width="100%" />
