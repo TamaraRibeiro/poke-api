@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# CodeLeap Product Design Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src=".github/cover.png" alt="cover BestUse test" width="100%" />
+</p>
 
-Currently, two official plugins are available:
+## 🖥️ Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project developed as a technical test for a Junior Software Developer position at BestUse Technology. The goal is to create a React app that consumes [PokéAPI](https://pokeapi.co/) to list and show Pokémon details.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Technologies
 
-- Configure the top-level `parserOptions` property like this:
+The following technologies were used to develop this project:
+- Vite + React
+- TailwindCSS  
+- TypeScript
+- Axios
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Installation
+
+Use the package manager [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/pt/) to install the project dependencies.
+
+## 🐾 Steps
+First download or clone the project folder from this GitHub repository. 
+
+Then run the command to install the dependencies:
+```bash
+npm install
+pnpm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Lastly run the command to run the frontend application on your localhost:
+```bash
+npm run dev
+pnpm run dev
 ```
+
+## 📖 Usage
+You can search a Pokémon by typing its name on the search field, or by simply navigating between pages. Once you click on a card, you will be prompted with the respective Pokémon image, name, type(s) and abilities.
+
+## ✍🏻 Future recommended improvements 
+- add a button to toggle between light and dark mode; 
+- add a soft animation when opening/closing a modal;
+- add a button to play the sound of a Pokémon; 
+
+<!-- ### ✨ You also can check the project running [here]()! -->
